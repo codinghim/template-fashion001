@@ -1,0 +1,33 @@
+@import '../../styles/lib/lib.scss';
+
+.main_footer p {
+  font-size: $sm_font
+}
+
+%format {
+  font-size: $sm_font;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.footer_attribution {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 20px;
+}
+
+.footer_attribution span, .footer_attribution a {
+  font-size: $sm_font
+}

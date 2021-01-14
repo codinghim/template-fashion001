@@ -1,0 +1,80 @@
+@import './breakpoints.scss';
+@import './variables.scss';
+
+%input_text {
+  font-family: $font_1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  width: 55vw;
+  &:focus {
+    border: 1px solid black
+  }
+  @include breakpoint(mobile) {
+    width: 85vw;
+  }
+  @include breakpoint(tablet) {
+  }
+}
+
+%input_text::placeholder {
+  font-family: $font_1;
+  @include breakpoint(mobile) {
+  }
+  @include breakpoint(tablet) {
+
+  }
+}
+
+%input_textarea {
+  font-family: $font_1;
+  resize: vertical;
+  height: 150px;
+  width: 55vw;
+  border:none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  outline: none;
+  &:focus {
+    border: 1px solid black
+  }
+  @include breakpoint(mobile) {
+
+    width: 85vw;
+  }
+  @include breakpoint(tablet) {
+
+  }
+}
+
+%input_textarea::placeholder {
+  font-family: $font_1;
+
+  @include breakpoint(mobile) {
+
+  }
+  @include breakpoint(tablet) {
+
+  }
+}
+
+%input_btn {
+  cursor: pointer;
+
+  background-color: transparent;
+  border: 1px solid black;
+  outline: none;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+  @include breakpoint(mobile) {
+
+  }
+  @include breakpoint(tablet) {
+
+  }
+}
+
+

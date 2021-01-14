@@ -1,65 +1,106 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Image from 'next/image'
+import styles from '../styles/pages/home.module.scss'
+
+
+import Layout from '../components/layout'
+// import { readDir } from '../lib/fileServices'
+
+const homeArr = [
+  {
+    source: "/images/home/home1.jpg",
+    title: "Image Title",
+    desc: "Place your desired image description here. Lorem Ipsum."
+  },
+  {
+    source: "/images/home/home2.jpg",
+    title: "Image Title",
+    desc: "Place your desired image description here. Lorem Ipsum."
+  }
+]
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout>
+      <section>
+      <div className={styles.background}>
+        <p data-aos="zoom-in" className={styles.intro_subtext}>&quot;Fashion is the armor to survive the reality of everyday life.&quot;</p>
+        <p>- Bill Cunningham</p>
+      </div>
+      <section className={styles.text_section}>
+        <article data-aos="zoom-out" className={styles.text}>
+          <p>Detailed description of the work you provide along with other details. Sed auctor tortor sollicitudin ut. Duis orci metus, interdum sit amet nulla sed.</p>
+          <q className={styles.quote}>Optional Quote or Phrase. Lorem Ipsum.</q>
+        </article>
+      </section>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+      <section className={styles.images_section}>
+        <article className={styles.images_subsection}>
+          <div data-aos="zoom-in" className={styles.image_text_container}>
+            <h1 className={styles.extra_title}>Contemporary Design</h1>
+            <h2 className={styles.image_title}>Desired Image Title</h2>
+            <div className={styles.divider}></div>
+            <p className={styles.image_subtext}>
+              Place your desired image description here. Lorem Ipsum
+              sed auctor tortor sollicitudin ut. Duis orci metus, interdum sit amet nulla sed.
             </p>
-          </a>
-        </div>
-      </main>
+          </div>
+          <div className={styles.section_image}>
+            <Image
+            data-aos="slide-left"
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+            src="/images/home/home1.jpg"
+            objectFit="cover"
+            objectPosition="center"
+            layout="fill"/>
+          </div>
+
+        </article>
+      </section>
+
+      <section className={styles.text_section}>
+        <article data-aos="zoom-out" className={styles.text}>
+          <p style={{fontWeight: "bold", fontSize: "1.1rem"}}>
+            Place some extra content you wish to display on your home page! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec pulvinar leo. Nam vestibulum feugiat finibus.
+          </p>
+          <ul>
+            <li>Graduated Fashion Institute of Technology with a degree in Fashion Design, 2020.</li>
+            <li>Recieved an award for NYC Fashion Design Contest, 2019.</li>
+            <li>Collaborations with well-known brands such as Exquizit, Lucid, Suburban, and Magi.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section className={styles.images_section}>
+      <article className={styles.images_subsection}>
+          <div className={styles.section_image}>
+            <Image
+            data-aos="slide-right"
+
+            src="/images/home/home2.jpg"
+            objectFit="cover"
+            objectPosition="center"
+            layout="fill"/>
+          </div>
+          <div data-aos="zoom-in" className={styles.image_text_container}>
+          <h1 className={styles.extra_title}>Artistic Fashion</h1>
+            <h2 className={styles.image_title}>Desired Image Title</h2>
+            <div className={styles.divider}></div>
+            <p className={styles.image_subtext}>
+              Place your desired image description here. Lorem Ipsum
+              sed auctor tortor sollicitudin ut. Duis orci metus, interdum sit amet nulla sed.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section className={styles.text_section}>
+        <article data-aos="zoom-out" className={styles.text}>
+          <p>
+            Optional conclusion text of your home page, if desired. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec pulvinar leo. Nam vestibulum feugiat finibus. Pellentesque sed vestibulum massa. Nulla facilisi. Nunc luctus, libero ut fringilla commodo.
+          </p>
+        </article>
+      </section>
+      </section>
+    </Layout>
   )
 }

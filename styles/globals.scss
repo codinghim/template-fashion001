@@ -1,0 +1,34 @@
+@import './lib/lib.scss';
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $background_color;
+  color: $primary_color;
+  padding: 0;
+  margin: 0;
+  font-family: $font_2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+  @include breakpoint(mobile) {
+    font-size: $sm_font_mobile
+  }
+  line-height: 2em;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+

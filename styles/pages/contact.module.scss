@@ -1,0 +1,53 @@
+@import '../lib/lib.scss';
+
+.contact_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_header {
+  font-family: $font_1;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.contact_intro_text {
+  font-family: $font_3;
+  font-size: 1.2rem;
+}
+
+.contact_form_container {
+
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.input_text {
+  @extend %input_text;
+  margin: 1.5vh;
+}
+
+.input_text_subject {
+  @extend %input_text;
+  margin: 1.5vh;
+}
+
+.input_textarea {
+  @extend %input_textarea;
+  margin: 1.5vh;
+}
+
+.input_btn {
+  margin: 1.5vh;
+  @extend %input_btn;
+}
+
+.bold {
+  font-family: $font_1;
+  font-weight: bold;
+}
