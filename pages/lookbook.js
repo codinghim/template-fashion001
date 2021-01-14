@@ -173,7 +173,7 @@ export default function Lookbook() {
                 className={image.style}>
                 <Image
                   priority="true"
-                  loading="eager"
+
                   alt={`image${i}`}
                   src={image.source}
                   objectFit="cover"
