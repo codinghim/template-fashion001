@@ -172,7 +172,7 @@ export default function Lookbook() {
                 whileHover="hover"
                 className={image.style}>
                 <Image
-                  priority="true"
+                  priority
 
                   alt={`image${i}`}
                   src={image.source}
