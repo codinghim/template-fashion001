@@ -115,7 +115,7 @@ export default function Lookbook() {
   return (
     <Layout>
       <AnimatePresence>
-      <motion.section variants={modalVariant}
+      {/* <motion.section variants={modalVariant}
         initial="initial"
         animate="idle"
         exit="exit"
@@ -146,13 +146,7 @@ export default function Lookbook() {
               </div>
             )
           })}
-          {/* <button className={styles.modal_next_btn}>
-            Next
-          </button>
-          <button className={styles.modal_prev_btn}>
-            Previous
-          </button> */}
-        </motion.section>
+        </motion.section> */}
 
 
       {
@@ -179,6 +173,13 @@ export default function Lookbook() {
                   objectFit="cover"
                   objectPosition="center"
                   layout="fill"/>
+                  {/* <Image
+                  priority
+
+                  alt={`image${i}`}
+                  src={image.source}
+                  height={1000}
+                  width={500}/> */}
 
                 <motion.div
                   variants={imageTitleVariant}

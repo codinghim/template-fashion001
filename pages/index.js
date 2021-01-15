@@ -44,7 +44,7 @@ export default function Home() {
               sed auctor tortor sollicitudin ut. Duis orci metus, interdum sit amet nulla sed.
             </p>
           </div>
-          <div className={styles.section_image}>
+          {/* <div className={styles.section_image}>
             <Image
             data-aos="slide-left"
 
@@ -52,7 +52,13 @@ export default function Home() {
             objectFit="cover"
             objectPosition="center"
             layout="fill"/>
-          </div>
+          </div> */}
+          <Image
+            data-aos="slide-left"
+
+            src="/images/home/home1.jpg"
+            height={800}
+            width={600}/>
 
         </article>
       </section>
@@ -72,7 +78,7 @@ export default function Home() {
 
       <section className={styles.images_section}>
       <article className={styles.images_subsection}>
-          <div className={styles.section_image}>
+          {/* <div className={styles.section_image}>
             <Image
             data-aos="slide-right"
 
@@ -80,7 +86,13 @@ export default function Home() {
             objectFit="cover"
             objectPosition="center"
             layout="fill"/>
-          </div>
+          </div> */}
+          <Image
+            data-aos="slide-right"
+
+            src="/images/home/home2.jpg"
+            width={600}
+            height={800}/>
           <div data-aos="zoom-in" className={styles.image_text_container}>
           <h1 className={styles.extra_title}>Artistic Fashion</h1>
             <h2 className={styles.image_title}>Desired Image Title</h2>
