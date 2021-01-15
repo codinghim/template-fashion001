@@ -17,7 +17,7 @@
   }
   @include breakpoint(tablet) {
 
-    margin: -3vw 0px 6vw 0px;
+    margin: -6vw 0px 3vw 3vw;
   }
 }
 
@@ -45,7 +45,7 @@
     height: 40vh;
   }
   @include breakpoint(tablet) {
-    height: 50vh;
+    height: 60vh;
 
   }
 }

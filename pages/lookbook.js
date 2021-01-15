@@ -115,7 +115,7 @@ export default function Lookbook() {
   return (
     <Layout>
       <AnimatePresence>
-      {/* <motion.section variants={modalVariant}
+      <motion.section variants={modalVariant}
         initial="initial"
         animate="idle"
         exit="exit"
@@ -127,10 +127,12 @@ export default function Lookbook() {
                 <div className={styles.modal_img_container}>
                   <div className={styles.img_container}>
                   <Image
+                    sizes={"(max-height: 500px) 1000px"}
                     src={image.source}
                     objectFit="contain"
                     objectPosition="center"
                     layout="fill"/>
+
                   </div>
 
                 </div>
@@ -146,7 +148,7 @@ export default function Lookbook() {
               </div>
             )
           })}
-        </motion.section> */}
+        </motion.section>
 
 
       {
@@ -167,7 +169,7 @@ export default function Lookbook() {
                 className={image.style}>
                 <Image
                   priority
-
+                  // sizes={"(max-height: 2000px) 800px"}
                   alt={`image${i}`}
                   src={image.source}
                   objectFit="cover"
